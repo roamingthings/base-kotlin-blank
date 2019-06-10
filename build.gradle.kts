@@ -2,10 +2,10 @@ import org.gradle.api.JavaVersion.VERSION_1_8
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
-    extra["kotlinVersion"] = "1.3.21"
-    extra["assertjVersion"] = "3.12.0"
-    extra["junitVersion"] = "5.4.0"
-    extra["mockitoVersion"] = "2.24.5"
+    extra["kotlinVersion"] = "1.3.31"
+    extra["assertjVersion"] = "3.12.2"
+    extra["junitVersion"] = "5.4.2"
+    extra["mockitoVersion"] = "2.28.2"
 
     val kotlinVersion: String by extra
 
@@ -19,7 +19,7 @@ buildscript {
 }
 
 plugins {
-    kotlin("jvm") version "1.3.21"
+    kotlin("jvm") version "1.3.31"
 }
 
 group = "de.roamingthings"
