@@ -29,12 +29,11 @@ repositories {
     mavenCentral()
 }
 
+val kotlinVersion: String by extra
+val junitVersion: String by extra
+val mockitoVersion: String by extra
+val assertjVersion: String by extra
 dependencies {
-    val kotlinVersion: String by extra
-    val junitVersion: String by extra
-    val mockitoVersion: String by extra
-    val assertjVersion: String by extra
-
     compile(kotlin("stdlib-jdk8"))
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
@@ -53,4 +52,11 @@ configure<JavaPluginConvention> {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+tasks.test {
+    useJUnitPlatform()
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
 }
