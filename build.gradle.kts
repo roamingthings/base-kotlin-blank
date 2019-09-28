@@ -36,10 +36,7 @@ val assertjVersion: String by extra
 dependencies {
     compile(kotlin("stdlib-jdk8"))
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
-
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
-    testRuntimeOnly("org.junit.vintage:junit-vintage-engine:$junitVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
 
     testCompile("org.assertj:assertj-core:$assertjVersion")
     testCompile("org.mockito:mockito-core:$mockitoVersion")
